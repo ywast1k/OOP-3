@@ -45,5 +45,17 @@ public class StudentGrupp implements Iterable<Student>, Comparable<StudentGrupp>
         return 0;       
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+    sb.append("StudentGrupp [ idStudentGrupp=").append(idStudentGrupp).append(",\nstudentList=[\n");
+    for (Student student : studentList) {
+        sb.append("  ").append(student.toString()).append(",\n");
+    }
+    sb.append("]]");
+    return sb.toString();
+        // return "StudentGrupp [ idStudentGrupp=" + idStudentGrupp + ", studentList=" + studentList + "]";
+    }
+
 
 }

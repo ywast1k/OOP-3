@@ -10,8 +10,10 @@ public class Main {
      * Добавление студентов. Раздача имен и лет(указано в Student.java).
      */
     public static void main(String[] args){
+        // Создание листов
         List<Student> students = new ArrayList<>();
         List<Student> students2 = new ArrayList<>();
+//==========================
         Student student1 = new Student("Mikael", 24);
         Student student2 = new Student("Sanni", 19);
         Student student3 = new Student("Luisa", 18);
@@ -39,7 +41,7 @@ public class Main {
         students2.add(student10);
         students2.add(student11);
         students2.add(student12);
-        
+    // Создание двух основных групп
         StudentGrupp studentGrupp1 = new StudentGrupp(1, students);
         StudentGrupp studentGrupp2 = new StudentGrupp(2, students2);
         /**
@@ -72,6 +74,8 @@ public class Main {
        
     System.out.println("---------");
 //--------------------------------------------------------------------
+
+// сохранение списков в новый лист
    List<StudentGrupp> studentGrupps = new ArrayList<>();
    studentGrupps.add(studentGrupp1);
    studentGrupps.add(studentGrupp2);
@@ -82,7 +86,7 @@ public class Main {
 
    System.out.println("-----");
 
-
+// Сортировка студентов
     Collections.sort(studentSteam.getStudentGrupps());
     System.out.println(studentSteam);
 

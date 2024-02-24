@@ -43,11 +43,13 @@ public class StudentSteam implements Iterable<StudentGrupp>{
 
     @Override
     public String toString() {
-        String temp = "";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Поток = ").append(nameValve).append("\n");
+        sb.append("Количество групп = ").append(studentGrupps.size()).append("\n");
         for(StudentGrupp studentGrupp : studentGrupps){
-            temp+= studentGrupp+"\n";
+            sb.append(studentGrupp).append("\n");
         }
-       return "Поток = " + nameValve + "\n кол-во групп " + studentGrupps.size() + "\n" + temp;
+        return sb.toString();
     }
 
     

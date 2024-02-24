@@ -27,7 +27,7 @@ public class Student extends Person implements Comparable<Student>{
 //* Сортировка по имени и ид */
     @Override
     public int compareTo(Student o) {
-        System.out.println(this.getName() + " - " + o.getName());
+        
         if(this.getAge() > o.getAge())
         return 1;
         if(this.getAge() < o.getAge())

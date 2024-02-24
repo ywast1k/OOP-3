@@ -3,7 +3,7 @@ package Domen;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGrupp implements Iterable<Student> {
+public class StudentGrupp implements Iterable<Student>, Comparable<StudentGrupp> {
     public int idStudentGrupp;
     // Создание листа
     private List<Student> studentList;
@@ -33,6 +33,16 @@ public class StudentGrupp implements Iterable<Student> {
     public Iterator<Student> iterator() {
         
         return new StudentIterator(studentList);
+    }
+//* Сортировка по кол-ву студентов в группе, */
+    @Override
+    public int compareTo(StudentGrupp o) {
+        if(this.getStudentList().size() > o.getStudentList().size()) return 1;
+        if(this.getStudentList().size() < o.getStudentList().size()) return -1; 
+        
+        if(this.getIdStudentGrupp() > o.getIdStudentGrupp()) return 1;
+        if(this.getIdStudentGrupp() < o.getIdStudentGrupp()) return 1;
+        return 0;       
     }
 
 

@@ -43,33 +43,52 @@ public class Main {
         StudentGrupp studentGrupp1 = new StudentGrupp(1, students);
         StudentGrupp studentGrupp2 = new StudentGrupp(2, students2);
         /**
-     * Вывод списка студентов
+     * Вывод списка студентов 1
      */
 
     for (Student student: studentGrupp1) {
         System.out.println(student);
-        
     }
-
-    System.out.println("---------");
-
+   /**
+     * Вывод списка студентов 2
+     */
     for (Student student: studentGrupp2) {
         System.out.println(student);
     }
+
+    System.out.println("---------");
+       /**
+     * сортировка
+     */ 
+    Collections.sort(studentGrupp2.getStudentList());
+        for (Student student: studentGrupp2) {
+            System.out.println(student);
+    }
    
-        Collections.sort(studentGrupp1.getStudentList());
+    Collections.sort(studentGrupp1.getStudentList());
         for (Student student: studentGrupp1) {
             System.out.println(student);
         }
        
     System.out.println("---------");
-    List<StudentGrupp> studentGrupps = new ArrayList<>();
-    studentGrupps.add(studentGrupp1);
-    studentGrupps.add(studentGrupp2);
+//--------------------------------------------------------------------
+   List<StudentGrupp> studentGrupps = new ArrayList<>();
+   studentGrupps.add(studentGrupp1);
+   studentGrupps.add(studentGrupp2);
 
-    StudentSteam studentSteam = new StudentSteam(studentGrupps, 3);
+   StudentSteam studentSteam = new StudentSteam(studentGrupps, 3);
+   //System.out.println(studentGrupps);
+
+
+   System.out.println("-----");
+
+
+    Collections.sort(studentSteam.getStudentGrupps());
     System.out.println(studentSteam);
+
+
     System.out.println("-----");
+
 
 
     }    

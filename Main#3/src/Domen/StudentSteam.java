@@ -43,8 +43,11 @@ public class StudentSteam implements Iterable<StudentGrupp>{
 
     @Override
     public String toString() {
-
-        return "StudentSteam [номер потока=" + nameValve + ", studentGrupps=" + studentGrupps + "]";
+        String temp = "";
+        for(StudentGrupp studentGrupp : studentGrupps){
+            temp+= studentGrupp+"\n";
+        }
+       return "Поток = " + nameValve + "\n кол-во групп " + studentGrupps.size() + "\n" + temp;
     }
 
     

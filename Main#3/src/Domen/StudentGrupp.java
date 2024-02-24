@@ -44,7 +44,7 @@ public class StudentGrupp implements Iterable<Student>, Comparable<StudentGrupp>
         if(this.getIdStudentGrupp() < o.getIdStudentGrupp()) return 1;
         return 0;       
     }
-
+// Добавления для вывода списков
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -54,8 +54,7 @@ public class StudentGrupp implements Iterable<Student>, Comparable<StudentGrupp>
     }
     sb.append("]]");
     return sb.toString();
-        // return "StudentGrupp [ idStudentGrupp=" + idStudentGrupp + ", studentList=" + studentList + "]";
-    }
+} 
 
 
 }

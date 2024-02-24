@@ -40,7 +40,7 @@ public class StudentSteam implements Iterable<StudentGrupp>{
     public Iterator<StudentGrupp> iterator() {
         return new StudentGruppIterator(studentGrupps);
     }
-
+// Вывод Групп с добавлением строк
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

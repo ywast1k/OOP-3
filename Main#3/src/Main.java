@@ -2,9 +2,13 @@ import java.util.ArrayList;
 
 import java.util.Collections;
 import java.util.List;
+
+import Controllers.AccountController;
+import Domen.Employee;
 import Domen.Student;
 import Domen.StudentGrupp;
 import Domen.StudentSteam;
+import Domen.Teacher;
 public class Main {
     /**
      * Добавление студентов. Раздача имен и лет(указано в Student.java).
@@ -93,7 +97,19 @@ public class Main {
 
     System.out.println("-----");
 
+        Employee worker = new Employee("Василий ", 69, "Cтоляр");
+        Teacher teacher = new Teacher("Галина ", 55, "Доцент" );
+      //AccountController contr = new AccountController();
+      //contr.PaySalary(worker, 20000);
+      //contr.PaySalary(teacher, 20001);
+       // contr.PaySalary(100, 2000); 
+       //Student studentVasyaHytry = new Student("Вася-хитрый ", 20);
+       //contr.PaySalary(studentVasyaHytry, 1000);
 
+
+       // Сокращение кода выше + защита от вмешательства > WorkingPerson
+        AccountController.PaySalary(worker, 10000);
+        AccountController.PaySalary(teacher, 10001);
 
     }    
 }

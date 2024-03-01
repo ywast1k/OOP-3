@@ -111,5 +111,8 @@ public class Main {
         AccountController.PaySalary(worker, 10000);
         AccountController.PaySalary(teacher, 10001);
 
+
+        
+
     }    
 }

@@ -24,7 +24,7 @@ public class TeacherService implements iPersonService<Teacher> {
 
     @Override
     public void create(String name, int age) {
-        Teacher newTeacher = new Teacher(name, age, name);
+        Teacher newTeacher = new Teacher(name, age, "Учитель");
         this.listTeacher.add(newTeacher);
         this.count++;
         

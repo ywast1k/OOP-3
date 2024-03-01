@@ -5,6 +5,7 @@ import java.util.List;
 
 import Controllers.AccountController;
 import Domen.Employee;
+
 import Domen.Student;
 import Domen.StudentGrupp;
 import Domen.StudentSteam;
@@ -109,10 +110,23 @@ public class Main {
 
        // Сокращение кода выше + защита от вмешательства > WorkingPerson
         AccountController.PaySalary(worker, 10000);
-        AccountController.PaySalary(teacher, 10001);
+        AccountController.PaySalary( teacher, 10001);
 
+        System.out.println("-----------------------------");
 
+        Teacher teacher2 = new Teacher("Margaritta", 55, "Интерн");     // Создание учителя
+        Teacher teacher3 = new Teacher("Muhamed", 49, "Зав. каф.");     // Создание учителя
+        Teacher teacher4 = new Teacher("Grigoriy", 50, "Ассистент");        // Создание учителя
+        Teacher teacher5 = new Teacher("Alex", 22, "Ассистент");        // Создание учителя
+            
+        List<Teacher> Teachers = new ArrayList<>(); // Создание листа
         
+        Teachers.add(teacher2);         // Сохранение учителя
+        Teachers.add(teacher3);         // Сохранение учителя
+        Teachers.add(teacher4);         // Сохранение учителя
+        Teachers.add(teacher5);         // Сохранение учителя
+
+        AccountController.averageAge(Teachers);   // Вывод метода в консоль по введенному списку.
 
     }    
 }

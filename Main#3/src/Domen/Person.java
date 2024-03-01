@@ -3,23 +3,23 @@ package Domen;
      * Создание двух переменных name, age
      * Создание конструктора, после гетеров и сетеров
      */
-public class Person {
-    private String name;
-    private int age;
-    public Person(String name, int age) {
+public class Person<T,V> {
+    private T name;
+    private V age;
+    public Person(T name, V age) {
         this.name = name;
         this.age = age;
     }
-    public String getName() {
+    public T getName() {
         return name;
     }
-    public void setName(String name) {
+    public void setName(T name) {
         this.name = name;
     }
-    public int getAge() {
+    public V getAge() {
         return age;
     }
-    public void setAge(int age) {
+    public void setAge(V age) {
         this.age = age;
     }
     @Override

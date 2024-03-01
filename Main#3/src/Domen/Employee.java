@@ -1,9 +1,9 @@
 package Domen;
 
-public class Employee extends WorkingPerson {
+public class Employee<T,V> extends WorkingPerson<T,V> {
 
-    private String special;
-    public Employee(String name, int age, String special) {
+    private T special;
+    public Employee(T name, V age, T special) {
         super(name, age);
         this.special = special; // Добавление специальности
 

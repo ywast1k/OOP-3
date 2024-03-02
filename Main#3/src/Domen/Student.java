@@ -1,6 +1,6 @@
 package Domen;
 
-public class Student<T extends Comparable<T>,V> extends Person<T,V> implements Comparable<Student<T,V>>{
+public class Student extends Person implements Comparable<Student>{
     private int id;
     private static int idGenerator;
 

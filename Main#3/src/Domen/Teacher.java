@@ -1,10 +1,10 @@
 package Domen;
 // передача информации в WPerson
-public class Teacher extends WorkingPerson {
+public class Teacher<T,V> extends WorkingPerson<T,V> {
 
-    private String degree;
+    private T degree;
 
-    public Teacher(String name, int age, String degree) {
+    public Teacher(T name, V age, T degree) {
         super(name, age);
         this.degree = degree; //cтепень
         

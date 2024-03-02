@@ -16,9 +16,7 @@ public class Main {
      */
     public static void main(String[] args){
 
-        Person<String, Integer> pers1 = new Person<String, Integer>("1111", 23);
-            
-        
+        Person<String, Integer> pers1 = new Person<String, Integer>(1111, 23){}
 //           // Создание листов
 //           List<Student> students = new ArrayList<>();
 //           List<Student> students2 = new ArrayList<>();

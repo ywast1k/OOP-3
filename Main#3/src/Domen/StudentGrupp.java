@@ -3,12 +3,12 @@ package Domen;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGrupp implements Iterable<Student>, Comparable<StudentGrupp> {
+public class StudentGrupp<T extends Comparable<T>,V> implements Iterable<Student<T,V>>, Comparable<StudentGrupp<T,V>> {
     public int idStudentGrupp;
     // Создание листа
-    private List<Student> studentList;
+    private List<Student<T,V>> studentList;
 
-    public StudentGrupp(int idStudentGrupp, List<Student> studentList) {
+    public StudentGrupp(int idStudentGrupp, List<Student<T,V>> studentList) {
         this.idStudentGrupp = idStudentGrupp;
         this.studentList = studentList;
     }
@@ -21,16 +21,16 @@ public class StudentGrupp implements Iterable<Student>, Comparable<StudentGrupp>
         this.idStudentGrupp = idStudentGrupp;
     }
 
-    public List<Student> getStudentList() {
+    public List<Student<T,V>> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(List<Student> studentList) {
+    public void setStudentList(List<Student<T,V>> studentList) {
         this.studentList = studentList;
     }
 
     @Override
-    public Iterator<Student> iterator() {
+    public Iterator<Student<T,V> iterator() {
         
         return new StudentIterator(studentList);
     }

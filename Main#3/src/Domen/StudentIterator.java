@@ -8,8 +8,8 @@ public class StudentIterator implements Iterator<Student>{
     private int counter = 0;
     private List<Student> students;
     
-    public StudentIterator(List<Student> students) {
-        this.students = students;
+    public StudentIterator(List<Student> studentList) {
+        this.students = studentList;
     }
 
     @Override

@@ -1,12 +1,12 @@
 package Domen;
 
-public class Student extends Person implements Comparable<Student>{
+public class Student<T extends Comparable<T>,V> extends Person<T,V> implements Comparable<Student<T,V>>{
     private int id;
     private static int idGenerator;
 
    
 // Генерация ИД
-    public Student(String name, int age) {
+    public Student(T name, V age) {
         super(name, age);
         idGenerator++;
         this.id = idGenerator;
@@ -26,15 +26,17 @@ public class Student extends Person implements Comparable<Student>{
     }
 //* Сортировка по имени и ид */
     @Override
-    public int compareTo(Student o) {
+    public int compareTo(Student<T,V> o) {
+
+        return super.getName().compareTo(o.getName());
         
-        if(this.getAge() > o.getAge())
-        return 1;
-        if(this.getAge() < o.getAge())
-        return -1;
-        if(this.getId() > o.getId()) return 1;
-        if(this.getId() < o.getId()) return -1;
-        return 0;
+        //if(this.getAge() > o.getAge())
+        //return 1;
+        //if(this.getAge() < o.getAge())
+        //return -1;
+        //if(this.getId() > o.getId()) return 1;
+        //if(this.getId() < o.getId()) return -1;
+        //return 0;
 
        
     }
